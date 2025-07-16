@@ -1,7 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////
-// 🛑 Nothing in here has anything to do with Remix, it's just a fake database
-////////////////////////////////////////////////////////////////////////////////
-
 import { matchSorter } from "match-sorter";
 // @ts-expect-error - no types, but it's a tiny function
 import sortBy from "sort-by";
@@ -11,9 +7,22 @@ type ContactMutation = {
   id?: string;
   first?: string;
   last?: string;
+  first_kana?: string;
+  last_kana?: string;
   avatar?: string;
   twitter?: string;
+  nationality?: string;
+  birth?: string;
+  gender?: string;
+  phonenumber?: string;
+  employee_number?: string;
+  position?: string;
+  address?: string;
+  upper_department?: string;
+  lower_department?: string;
+  career_start_date?: string;
   notes?: string;
+  description?: string;
   favorite?: boolean;
 };
 
@@ -22,9 +31,6 @@ export type ContactRecord = ContactMutation & {
   createdAt: string;
 };
 
-////////////////////////////////////////////////////////////////////////////////
-// This is just a fake DB table. In a real app you'd be talking to a real db or
-// fetching from an existing API.
 const fakeContacts = {
   records: {} as Record<string, ContactRecord>,
 
@@ -60,8 +66,6 @@ const fakeContacts = {
   },
 };
 
-////////////////////////////////////////////////////////////////////////////////
-// Handful of helper functions to be called from route loaders and actions
 export async function getContacts(query?: string | null) {
   await new Promise((resolve) => setTimeout(resolve, 500));
   let contacts = await fakeContacts.getAll();
