@@ -15,19 +15,21 @@ export const nameRowStyle = {
   alignItems: "center",
   gap: "12px", // 0.75rem 정도
   marginBottom: "16px",
+  maxWidth: "350px",
 };
 
 export const nameLabelStyle = {
-  width: "96px", // 6rem 정도
-  fontWeight: "600",
+  width: "96px",
+  fontWeight: "400",
 };
 
 export const nameInputStyle = {
-  flex: 1,
   padding: "6px 10px",
   border: "1px solid #ccc",
   borderRadius: "4px",
   fontSize: "1rem",
+  width: "150px",
+  boxSizing: "border-box",
 };
 
 export const birthlabelStyle = {
@@ -92,3 +94,72 @@ export const addressInputStyle = {
   fontSize: '14px',
   boxSizing: 'border-box',
 };
+
+export const upperDepartmentContainer = {
+  display: "flex",
+  gap: "1.5rem",
+  alignItems: "flex-start",
+  marginBottom: "1rem",
+}
+
+export const upperDepartmentLabelContainer = {
+  display: "flex",
+  flexDirection: "column",
+  minWidth: "180px",
+}
+
+export const upperDepartmentLabelText = {
+  marginBottom: 6,
+  fontWeight: 400,
+  fontSize: 14,
+}
+
+export const upperDepartmentSelect = {
+  padding: "6px 10px",
+  fontSize: 14,
+  borderRadius: 4,
+  border: "1px solid #ccc",
+}
+
+export const lowerDepartmentLabelContainer = {
+  display: "flex",
+  flexDirection: "column",
+  minWidth: "180px",
+}
+
+export const lowerDepartmentLabelText = {
+  marginBottom: 6,
+  fontWeight: 400,
+  fontSize: 14,
+}
+
+export const lowerDepartmentSelect = {
+  padding: "6px 10px",
+  fontSize: 14,
+  borderRadius: 4,
+  border: "1px solid #ccc",
+}
+
+export const careerDateLabel = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "6px",
+}
+
+export const sidebarbuttton = {
+              position: "fixed",
+              top: "1.5rem",
+              left: "1rem",
+              zIndex: 1000,
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+              alignItems: "center",
+              padding: "6px 0",
+              borderRadius: "6px",
+              userSelect: "none", }

@@ -96,6 +96,11 @@ export default function LoginPage() {
            회원가입
         </Link>
       </div>
+     <Link to="/find-pw" style={{
+      color: "#007bff",
+      textDecoration: "none",
+      fontSize: "14px",
+      }}>비밀번호 찾기</Link>
     </div>
   );
 }

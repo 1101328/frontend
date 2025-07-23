@@ -1,4 +1,4 @@
-// Register.tsx
+// app/routes/register.tsx
 
 import {
   ActionFunctionArgs,
@@ -64,23 +64,77 @@ export default function Register() {
         <div style={{ textAlign: "left" }}>
           <label htmlFor="email">이메일</label>
           <input
-          type="email"
-          name="email"
-          required style={{
-             width: "100%",
-             padding: "8px",
-             marginTop: "4px"
-             }}/>
+            type="email"
+            name="email"
+            required
+            style={{
+              width: "100%",
+              padding: "8px",
+              marginTop: "4px"
+            }}
+          />
+          <button
+            type="button"
+            style={{
+              marginTop: "8px",
+              padding: "6px 12px",
+              backgroundColor: "hsl(224, 98%, 58%)",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer"
+            }}
+          >
+            이메일 인증코드 발송
+          </button>
+        </div>
+
+        <div style={{ textAlign: "left" }}>
+          <label htmlFor="emailCode">인증코드 입력</label>
+          <input
+            type="text"
+            name="emailCode"
+            placeholder="인증코드를 입력하세요"
+            style={{
+              width: "100%",
+              padding: "8px",
+              marginTop: "4px"
+            }}
+          />
+          <button
+            type="button"
+            style={{
+              marginTop: "8px",
+              padding: "6px 12px",
+              backgroundColor: "gray",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer"
+            }}
+          >
+            확인
+          </button>
         </div>
 
         <div style={{ textAlign: "left" }}>
           <label htmlFor="password">비밀번호</label>
-          <input type="password" name="password" required style={{ width: "100%", padding: "8px", marginTop: "4px" }} />
+          <input
+            type="password"
+            name="password"
+            required
+            style={{ width: "100%", padding: "8px", marginTop: "4px" }}
+          />
         </div>
 
         <div style={{ textAlign: "left" }}>
           <label htmlFor="confirm">비밀번호 재확인</label>
-          <input type="password" name="confirm" required style={{ width: "100%", padding: "8px", marginTop: "4px" }} />
+          <input
+            type="password"
+            name="confirm"
+            required
+            style={{ width: "100%", padding: "8px", marginTop: "4px" }}
+          />
         </div>
 
         <button
@@ -93,7 +147,9 @@ export default function Register() {
             borderRadius: "4px",
             cursor: "pointer",
           }}
-        >회원가입</button>
+        >
+          회원가입
+        </button>
       </Form>
 
       <p style={{ marginTop: "16px", fontSize: "14px" }}>

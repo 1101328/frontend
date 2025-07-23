@@ -7,6 +7,12 @@ import { Form, useLoaderData, } from "@remix-run/react";
 import invariant from "tiny-invariant";
 import { getContact,updateContact } from "../data";
 import { useState } from "react";
+import {
+  containerStyle, nameRowStyle, nameLabelStyle, nameInputStyle,
+  birthlabelStyle, birthspanStyle, birthinputStyle,
+  phoneLabelStyle, phoneSpanStyle, phoneInputStyle,
+  addressLabelStyle, addressSpanStyle, addressInputStyle
+} from "~/styles/style";
 
 
 export const action = async ({
@@ -48,40 +54,18 @@ const [lowerDept, setLowerDept] = useState(contact.lower_department || "");
 
 return (
   <Form key={contact.id} id="contact-form" method="post">
-    <p>
-      <span>Name</span>
-      <input
-        aria-label="First name"
-        defaultValue={contact.first}
-        name="first"
-        placeholder="First"
-        type="text"
-      />
-      <input
-        aria-label="Last name"
-        defaultValue={contact.last}
-        name="last"
-        placeholder="Last"
-        type="text"
-      />
-    </p>
-    <p>
-      <span>Name Kana</span>
-      <input
-        aria-label="First name Kana"
-        defaultValue={contact.first_kana}
-        name="first_kana"
-        placeholder="First Kana"
-        type="text"
-      />
-      <input
-        aria-label="Last name Kana"
-        defaultValue={contact.last_kana}
-        name="last_kana"
-        placeholder="Last Kana"
-        type="text"
-      />
-    </p>
+    <p style={nameRowStyle}>
+        <span style={nameLabelStyle}>Name</span>
+        <input name="first" placeholder="First" type="text" style={nameInputStyle}/>
+        <input name="last" placeholder="Last" type="text" style={nameInputStyle}/>
+      </p>
+
+      <p style={nameRowStyle}>
+        <span style={nameLabelStyle}>Name Kana</span>
+        <input name="first_kana" placeholder="First Kana" type="text" required style={nameInputStyle}/>
+        <input name="last_kana" placeholder="Last Kana" type="text" required style={nameInputStyle}/>
+      </p>
+
     <label>
       <span>Avatar URL</span>
       <input
