@@ -106,19 +106,19 @@ export default function Index() {
   const departmentName = departmentMap[userInfo.department_low_id] || `부서 ID ${userInfo.department_low_id}`;
 
   return (
-    <main style={{ padding: "2rem", maxWidth: "700px", margin: "0 auto" }}>
+    <main style={{ padding: "2rem", maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
       <h1 style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
         👋 환영합니다, {userInfo.first_name}{userInfo.last_name} 님!
       </h1>
 
-      <ul style={{ marginTop: "1.5rem", lineHeight: 1.8 }}>
+      <ul style={{ marginTop: "1.5rem", lineHeight: 1.8, textAlign: "center", listStyle: "none" }}>
         <li>사원번호: {userInfo.employee_number}</li>
         <li>직급: {positionName}</li>
         <li>부서: {departmentName}</li>
         <li>입사일: {new Date(userInfo.career_start_date).toLocaleDateString("ko-KR")}</li>
       </ul>
 
-      <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+      <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
         <Link to="/certificate/new">
           <button style={buttonStyle}>📄 자격증 입력</button>
         </Link>
